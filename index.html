@@ -10,72 +10,84 @@
         <h1>Squirrel ˈskwər(ə)l</h1>
     </header>
     
-    <main>
-        <div class="container">
-            <div class="box">
-                <div class="icon">
-                    <img src="risu.png" alt="risu">
+    <body>
+        <main>
+            <div class="container">
+                <div class="box">
+                    <div class="icon">
+                        <img src="risu.png" alt="risu">
+                    </div>
+                    <button class="btn" onclick="modalOpen()">リス</button>
+                    <h4>I'm a squirrel</h4>
                 </div>
-                <button id="modalOpen">リス</button>
-                <h4>I'm a squirrel</h4>
+
+                <!--モーダル1-->
+                <div id="easyModal" class="modal" data-name="a">
+                    <div class="modal-content">
+                        <span class="modalClose">&times;</span>
+                        <div class="modal-body">
+                            <p>I'm a squirrel</p>
+                        </div>
+                    </div>
+                </div>
+                <!--モーダル1-->
+
+                <div class="box">
+                    <div class="icon">
+                        <img src="risu.png" alt="risu">
+                    </div>
+                    <button class="btn" onclick="modalOpen()">リス</button>
+                    <h4>I'm a squirrel</h4>
+                </div>
+
+                <!--モーダル2-->
+                <div id="easyModal2" class="modal" data-name="b">
+                    <div class="modal-content">
+                        <span class="modalClose">&times;</span>
+                        <div class="modal-body">
+                            <p>I'm a squirrel2</p>
+                        </div>
+                    </div>
+                </div>
+                <!--モーダル2-->
+
+                <div class="box">
+                    <div class="icon">
+                        <img src="risu.png" alt="risu">
+                    </div>
+                    <button class="btn">リス</button>
+                    <h4>I'm a squirrel3</h4>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <img src="risu.png" alt="risu">
+                    </div>
+                    <button class="btn">リス</button>
+                    <h4>I'm a squirrel4</h4>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <img src="risu.png" alt="risu">
+                    </div>
+                    <button class="btn">リス</button>
+                    <h4>I'm a squirrel5</h4>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <p>?</p>
+                    </div>
+                    <button class="btn">?</button>
+                    <h4>squirrel?</h4>
+                </div>
+
             </div>
+        </main>
 
-            <!--モーダル-->
-            <div id="easyModal" class="modal">
-                <div class="modal-content">
-                    <span class="modalClose">&times;</span>
-                      <div class="modal-body">
-                        <p>I'm a squirrel</p>
-                      </div>
-                </div>
-              </div>
-              <!--モーダル-->
-
-            <div class="box">
-                <div class="icon">
-                    <img src="risu.png" alt="risu">
-                </div>
-                <button>リス</button>
-                <h4>I'm a squirrel</h4>
-            </div>
-
-            <div class="box">
-                <div class="icon">
-                    <img src="risu.png" alt="risu">
-                </div>
-                <button>リス</button>
-                <h4>I'm a squirrel</h4>
-            </div>
-
-            <div class="box">
-                <div class="icon">
-                    <img src="risu.png" alt="risu">
-                </div>
-                <button>リス</button>
-                <h4>I'm a squirrel</h4>
-            </div>
-
-            <div class="box">
-                <div class="icon">
-                    <img src="risu.png" alt="risu">
-                </div>
-                <button>リス</button>
-                <h4>I'm a squirrel</h4>
-            </div>
-
-            <div class="box">
-                <div class="icon">
-                    <p>?</p>
-                </div>
-                <button>?</button>
-                <h4>squirrel?</h4>
-            </div>
-
-        </div>
-    </main>
-
-    <footer>
-    </footer>
-
-    <script src="main.js"></script>
+        <footer>
+        </footer>
+        <script src="main.js"></script>
+</body>
 </html>
