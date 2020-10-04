@@ -1,8 +1,8 @@
-// const modal = document.getElementById('easyModal');//モーダル要素
+//const modal = document.getElementById('easyModal');//モーダル要素
 const modal = document.querySelector('.modal');
-// const modal = document.querySelector(`.modal[data-name="${}]`);
+//const modal = document.querySelector(`.modal[data-name="${}]`);
 
-// const openBtn = document.getElementById('modalOpen');//モーダルを出すボタン要素
+//const openBtn = document.getElementById('modalOpen');//モーダルを出すボタン要素
 const openBtn = document.querySelector('.btn');
 
 const closeBtn = document.getElementsByClassName('modalClose')[0];
@@ -19,7 +19,7 @@ window.addEventListener('click', clickAnywhere);
 // モーダルオープンの関数
 function modalOpen() {
     modal.style.display = 'block';//開くボタンを押したらモーダルが出る
-    console.log(modal);
+    console.log(modal.dataset.name);
 }
 
 // モーダルを閉じる関数
