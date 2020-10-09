@@ -1,6 +1,4 @@
-//const modal =  document.getElementsByClassName('modal')//モーダル要素
-//const modal = document.querySelector(`.modal[data-name="${}]`);
-const modal = document.querySelector('.modal');
+const modal =  document.getElementsByClassName('modal')//モーダル要素
 console.log(modal);
 
 //const openBtn = document.getElementById('modalOpen');//モーダルを出すボタン要素
@@ -21,7 +19,6 @@ openBtn.addEventListener('click', modalOpen);
 // モーダルオープンの関数
 function modalOpen() {
     // modal.style.display = 'block';//開くボタンを押したらモーダルが出る
-    // console.log(modal.dataset.name);
 }
 
 // モーダルを閉じる関数
