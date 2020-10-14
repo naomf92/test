@@ -1,6 +1,7 @@
 const modal =  document.getElementsByClassName('modal')//モーダル要素
 //console.log(modal);
 
+// 配列として取得するclass要素を扱うので、インデックス番号の指定が必要です↓
 const openBtn = document.getElementsByClassName('btn');//モーダルを出すボタン要素
 //console.log(openBtn);
 
