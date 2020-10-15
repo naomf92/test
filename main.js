@@ -1,7 +1,12 @@
 const modal =  document.getElementsByClassName('modal')//モーダル要素
 //console.log(modal);
 
+<<<<<<< HEAD
 const openBtn = document.getElementsByClassName('btn')[0];//モーダルを出すボタン要素
+=======
+// 配列として取得するclass要素を扱うので、インデックス番号の指定が必要です↓
+const openBtn = document.getElementsByClassName('btn');//モーダルを出すボタン要素
+>>>>>>> 4a8ef4c3ccfef73f224f382ac1ed1126ccdb20f5
 //console.log(openBtn);
 
 //const closeBtn = document.getElementsByClassName('modalClose');
