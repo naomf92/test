@@ -17,10 +17,11 @@ openBtn.addEventListener('click', modalOpen);
 
 // モーダルオープンの関数
 function modalOpen() {
-    // if() {
-        modal[0].classList.add('modalOpen');
-    //} 
-    //modal.style.display = 'block';//開くボタンを押したらモーダルが出る
+    if () {//押したボタンが一つ目のボタンなら
+        modal[0].classList.add('modalOpen');//開くボタンを押したら一つ目のモーダルが出る
+    } else if () {//押したボタンが二つ目のボタンなら
+        
+    }
 }
 
 // モーダルを閉じる関数
