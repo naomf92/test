@@ -1,5 +1,5 @@
 const modal =  document.getElementsByClassName('modal')//モーダル要素
-console.log(modal);
+//console.log(modal);
 
 const openBtn = document.getElementsByClassName('btn')[0];//モーダルを出すボタン要素
 //console.log(openBtn);
@@ -17,9 +17,12 @@ openBtn.addEventListener('click', modalOpen);
 
 // モーダルオープンの関数
 function modalOpen() {
-    if () {//何かしらのボタンが押されたら
-        modal[0].classList.add('modalOpen');//[i]個目のモーダルが出る
-    } else if () {//押したボタンが二つ目のボタンなら → 3つ目、4つ目と増えるとその分else ifが増えるので、そうならないようにするには、配列のインデックス番号を[i]など、仮に値が入る変数として用意するのが良さそうです（再利用性の高さを意識）
+    for(let i = 0; i < 2; i++){
+        console.log(i);
+        if (modal[i]) {//何かしらのボタンが押されたら
+            console.log(modal[i]);
+            modal[i].classList.add('modalOpen');//[i]個目のモーダルが出る
+        }　
     }
 }
 
