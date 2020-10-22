@@ -18,13 +18,13 @@ openBtn.addEventListener('click', modalOpen);
 // モーダルオープンの関数
 function modalOpen() {
     // 条件式ヒント: modalの値の中身の「長さ」を把握するメソッドを使うと、モーダルが増えても対応できる
-    for(let i = 0; i < 2; i++){
+    for(let i = 0; i < modal.length; i++){
         console.log(i);
         // ↓ HTMLに追加するdata属性の属性と値を条件式に使える
-        if (modal[i]) {//何かしらのボタンが押されたら
+        if (modal[i].dataset.name == "modal1") {//何かしらのボタンが押されたら
             console.log(modal[i]);
             modal[i].classList.add('modalOpen');//[i]個目のモーダルが出る
-        }　
+        }
     }
 }
 
