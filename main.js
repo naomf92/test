@@ -17,14 +17,13 @@ openBtn.addEventListener('click', modalOpen);
 
 // モーダルオープンの関数
 function modalOpen(e) {// イベント引数を用意すると良いかもしれません
-    // 条件式ヒント: modalの値の中身の「長さ」を把握するメソッドを使うと、モーダルが増えても対応できる
-    // console.logでイベント引数eを検証すると、特定の要素選択のオプションが見つかります
+    // ↓ ヒント: 引数eを検証するとdev toolコンソールに出てくる「選択したHTML要素を取得する技法」はどれでしょうか？
+    console.log(e); // ← ここで引数eを検証します。for文内にはさらにスコープが入り組みます
+
     for(let i = 0; i < modal.length; i++){
         console.log(i);
-        console.log(e);
-        // ↓ HTMLに追加するdata属性の属性と値を条件式に使える
-        // 厳密等価演算子を基本的には使用しましょう
-        if (modal[i].dataset.name === `.modal[data-name="${e.}"`) {//何かしらのボタンが（イベントによって）押されたら → modal2や他のmodalを選択させる時に、書き方を考えなければいけません（上記の引数用意の箇所がその解決策です）
+        // ↓ 記述が長くなるので、右辺は定数に入れて定数名で条件式に呼び出すのが可読性が高くなります
+        if (modal[i].dataset.name === `.modal[data-name="${e.}"`) {
             console.log(modal[i]);
             modal[i].classList.add('modalOpen');//[i]個目のモーダルが出る
         }
