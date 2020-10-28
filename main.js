@@ -34,7 +34,7 @@ function modalOpen(e) {// イベント引数を用意すると良いかもしれ
     console.log('for文あと');
 }
 
-// モーダルを閉じる関数
+// モーダルを閉じる関数 ← こちらを先に取り組みましょう
 function modalClose() {
     modal[0].classList.remove('modalOpen');
 }
