@@ -4,13 +4,14 @@ const modal =  document.getElementsByClassName('modal')//モーダル要素
 const openBtn = document.getElementsByClassName('btn')[0];//モーダルを出すボタン要素
 //console.log(openBtn);
 
-//const closeBtn = document.getElementsByClassName('modalClose');
+const closeBtn = document.getElementsByClassName('modalClose')[0];
+console.log(closeBtn);
 
 // クリックで開くイベントリスナー
 openBtn.addEventListener('click', modalOpen);
 
 // クリックで閉じるイベントリスナー
-//closeBtn.addEventListener('click', modalClose);
+closeBtn.addEventListener('click', modalClose);
 
 // モーダル以外の場所クリックのイベントリスナー
 // window.addEventListener('click', clickAnywhere);
@@ -34,10 +35,9 @@ function modalOpen(e) {// イベント引数を用意すると良いかもしれ
 }
 
 // モーダルを閉じる関数
-//function modalClose() {
-    //modal.classList.remove('modalOpen');
-    //modal.style.display = 'none';//閉じるボタンを押したらモーダルが消える
-//}
+function modalClose() {
+    modal[0].classList.remove('modalOpen');
+}
 
 // // モーダル以外がクリックされた時に閉じる関数
 // function clickAnywhere(e) {// 以下のeventは引数として扱うので、宣言時に用意も必要です
