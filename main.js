@@ -1,11 +1,8 @@
 const modal =  document.getElementsByClassName('modal')//モーダル要素
-//console.log(modal);
 
 const openBtn = document.getElementsByClassName('btn')[0];//モーダルを出すボタン要素
-//console.log(openBtn);
 
 const closeBtn = document.getElementsByClassName('modalClose')[0];
-//console.log(closeBtn);
 
 // クリックで開くイベントリスナー
 openBtn.addEventListener('click', modalOpen);
@@ -22,7 +19,7 @@ function modalOpen(e) {// イベント引数を用意すると良いかもしれ
     let dataModalOpen = e.currentTarget.getAttribute('data-name'); // ← ここで引数eを検証します。for文内にはさらにスコープが入り組みます
     //console.log('for文前');
     for(let i = 0; i < modal.length; i++){
-        console.log(i);
+        //console.log(i);
         //↓ 記述が長くなるので、右辺は定数に入れて定数名で条件式に呼び出すのが可読性が高くなります
         if (modal[i].getAttribute('data-name') === dataModalOpen) {
             console.log(modal[i]);
@@ -36,9 +33,9 @@ function modalOpen(e) {// イベント引数を用意すると良いかもしれ
 
 // モーダルを閉じる関数 ← こちらを先に取り組みましょう
 function modalClose() {
-    for(let i = 0; i < modal.length; i++){
-        modal[i].classList.remove('modalOpen');
-    }
+    // for(let i = 0; i < modal.length; i++){
+    // }
+    modal[0].classList.remove('modalOpen');
 }
 
 // // モーダル以外がクリックされた時に閉じる関数
