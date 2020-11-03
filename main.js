@@ -23,7 +23,7 @@ function modalOpen(e) {// イベント引数を用意すると良いかもしれ
         //↓ 記述が長くなるので、右辺は定数に入れて定数名で条件式に呼び出すのが可読性が高くなります
         if (modal[i].getAttribute('data-name') === dataModalOpen) {
             console.log(modal[i]);
-            modal[i].classList.add('modalOpen');//[i]個目のモーダルが出る
+            modal[i].classList.add('modal-open');//[i]個目のモーダルが出る
             //console.log('if文スコープ内');
         }
         //console.log('for文スコープ内');
@@ -33,10 +33,12 @@ function modalOpen(e) {// イベント引数を用意すると良いかもしれ
 
 // モーダルを閉じる関数 ← こちらを先に取り組みましょう
 function modalClose() {
-    // for(let i = 0; i < modal.length; i++){
-    // }
-    modal[0].classList.remove('modalOpen');
+    for(let i = 0; i < modal.length; i++){
+        modal[i].classList.remove('modal-open');
+        modal[i].classList.add('modal-close');
+    }
 }
+//setTimeout(modalClose,2000);
 
 // // モーダル以外がクリックされた時に閉じる関数
 // function clickAnywhere(e) {// 以下のeventは引数として扱うので、宣言時に用意も必要です
