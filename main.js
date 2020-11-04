@@ -39,9 +39,11 @@ function modalClose() {
         // 今の状態: モーダルが一度でも開いたことがあれば、モーダルが開いた状態だと「class="modal modal-close modal-open"」になっている
 
         // 改善したいこと: モーダルが開いている時は「modal-open」だけ、モーダルが閉じた時は、「modal-close」を付与 → その数秒後くらいに「modal-close」も無くしたい → 「class="modal"」に最終的に戻すことで、今の状態を防げる
+        setTimeout(function() {
+            modal[i].classList.remove('modal-close')
+        }, 1000);
     }
 }
-//setTimeout(modalClose,2000);
 
 // // モーダル以外がクリックされた時に閉じる関数
 // function clickAnywhere(e) {// 以下のeventは引数として扱うので、宣言時に用意も必要です
