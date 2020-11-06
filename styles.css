@@ -132,7 +132,8 @@ button:focus {
     background-color: rgba(0,0,0,0.5);
 }
 
-.modal-open {
+/* JSで付与操作をするクラス名を変更したので、変えています */
+.is-open {
     display: block;
 }
 
