@@ -18,9 +18,6 @@ function modalOpen(e) {
         }
     }
 }
-
-// クリックで開くイベントリスナー
-// → functionを使った関数宣言方法なので、宣言部分より上に記載されていても呼び出しは可能ですが、無名関数宣言に書き換えたい場合に挙動を起こすので、上から順に「宣言ブロック → 呼び出し記述」と変更しました
 openBtn.addEventListener('click', modalOpen);
 
 // モーダルを閉じる関数
@@ -39,12 +36,13 @@ function modalClose() {
 // x印クリックでmodalを閉じる関数をここに宣言する
 // ヒント1: まず閉じるx印要素を取得すると、どこの話をしているのかがJSが把握しやすいです
 // ヒント2: ヒント1で取得したx印HTML要素に対して、何をどうするかという指示を書いていきます
-function pressXbutton(){
+function pressXbtn(){
+    //modalClose()
 }
 
 // クリックで閉じるイベントリスナー
 // ↓ 仮にx印で閉じるように書いているので、「x印クリックでmodalを閉じる関数」に.addEventListenerを紐付けするように変更します
-closeBtn.addEventListener('click', modalClose);
+closeBtn.addEventListener('click', pressXbtn);
 
 // // モーダル以外がクリックされた時に閉じる関数
 // function clickAnywhere(e) {// 以下のeventは引数として扱うので、宣言時に用意も必要です
