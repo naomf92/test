@@ -14,24 +14,23 @@ closeBtn.addEventListener('click', modalClose);
 // window.addEventListener('click', clickAnywhere);
 
 // モーダルオープンの関数
-function modalOpen(e) {// イベント引数を用意すると良いかもしれません
-    // ↓ ヒント: 引数eを検証するとdev toolコンソールに出てくる「選択したHTML要素を取得する技法」はどれでしょうか？
-    let dataModalOpen = e.currentTarget.getAttribute('data-name'); // ← ここで引数eを検証します。for文内にはさらにスコープが入り組みます
-    //console.log('for文前');
+function modalOpen(e) {
+    let dataModalOpen = e.currentTarget.getAttribute('data-name');
+
     for(let i = 0; i < modal.length; i++){
-        //console.log(i);
-        //↓ 記述が長くなるので、右辺は定数に入れて定数名で条件式に呼び出すのが可読性が高くなります
         if (modal[i].getAttribute('data-name') === dataModalOpen) {
             console.log(modal[i]);
-            modal[i].classList.add('modal-open');//[i]個目のモーダルが出る
-            //console.log('if文スコープ内');
+            modal[i].classList.add('modal-open');
         }
-        //console.log('for文スコープ内');
     }
-    //console.log('for文あと');
 }
 
-// モーダルを閉じる関数 ← こちらを先に取り組みましょう
+// クリックで開くイベントリスナー
+// → functionを使った関数宣言方法なので、宣言部分より上に記載されていても呼び出しは可能ですが、無名関数宣言に書き換えたい場合に挙動を起こすので、上から順に「宣言ブロック → 呼び出し記述」と変更しました
+openBtn.addEventListener('click', modalOpen);
+
+// モーダルを閉じる関数
+// ↑ この関数は、閉じることだけに特化しているので、「x印で」閉じるのか「外の範囲で」閉じるのかに関して(where)詳しい機能を用意するのは、これからです
 function modalClose() {
     for(let i = 0; i < modal.length; i++){
         modal[i].classList.remove('modal-open');
@@ -42,6 +41,16 @@ function modalClose() {
         }, 1000);
     }
 }
+
+// x印クリックでmodalを閉じる関数をここに宣言する
+// ヒント1: まず閉じるx印要素を取得すると、どこの話をしているのかがJSが把握しやすいです
+// ヒント2: ヒント1で取得したx印HTML要素に対して、何をどうするかという指示を書いていきます
+function pressXbutton(){
+}
+
+// クリックで閉じるイベントリスナー
+// ↓ 仮にx印で閉じるように書いているので、「x印クリックでmodalを閉じる関数」に.addEventListenerを紐付けするように変更します
+closeBtn.addEventListener('click', modalClose);
 
 // // モーダル以外がクリックされた時に閉じる関数
 // function clickAnywhere(e) {// 以下のeventは引数として扱うので、宣言時に用意も必要です
