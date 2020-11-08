@@ -4,12 +4,6 @@ const openBtn = document.getElementsByClassName('btn')[0];//モーダルを出�
 
 const closeBtn = document.getElementsByClassName('modalClose')[0];
 
-// クリックで開くイベントリスナー
-openBtn.addEventListener('click', modalOpen);
-
-// クリックで閉じるイベントリスナー
-closeBtn.addEventListener('click', modalClose);
-
 // モーダル以外の場所クリックのイベントリスナー
 // window.addEventListener('click', clickAnywhere);
 
@@ -20,7 +14,7 @@ function modalOpen(e) {
     for(let i = 0; i < modal.length; i++){
         if (modal[i].getAttribute('data-name') === dataModalOpen) {
             console.log(modal[i]);
-            modal[i].classList.add('modal-open');
+            modal[i].classList.add('is-open');
         }
     }
 }
@@ -33,11 +27,11 @@ openBtn.addEventListener('click', modalOpen);
 // ↑ この関数は、閉じることだけに特化しているので、「x印で」閉じるのか「外の範囲で」閉じるのかに関して(where)詳しい機能を用意するのは、これからです
 function modalClose() {
     for(let i = 0; i < modal.length; i++){
-        modal[i].classList.remove('modal-open');
-        modal[i].classList.add('modal-close');
+        modal[i].classList.remove('is-open');
+        modal[i].classList.add('is-close');
 
         setTimeout(function() {
-            modal[i].classList.remove('modal-close')
+            modal[i].classList.remove('is-close')
         }, 1000);
     }
 }
