@@ -132,10 +132,6 @@ button:focus {
     background-color: rgba(0,0,0,0.5);
 }
 
-<<<<<<< HEAD
-/* JSで付与操作をするクラス名を変更したので、変えています */
-=======
->>>>>>> 521b69915687da1117967cd3ebdfdae9681f1478
 .is-open {
     display: block;
 }
