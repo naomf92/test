@@ -2,7 +2,8 @@ const modal =  document.getElementsByClassName('modal')//モーダル要素
 
 const openBtn = document.getElementsByClassName('btn')[0];//モーダルを出すボタン要素
 
-const closeBtn = document.getElementsByClassName('modalClose')[0];
+//const closeBtn = document.getElementsByClassName('modalClose')[0];
+const closeBtn = document.querySelectorAll('.modalClose');
 
 // モーダル以外の場所クリックのイベントリスナー
 // window.addEventListener('click', clickAnywhere);
@@ -37,12 +38,13 @@ function modalClose() {
 // ヒント1: まず閉じるx印要素を取得すると、どこの話をしているのかがJSが把握しやすいです
 // ヒント2: ヒント1で取得したx印HTML要素に対して、何をどうするかという指示を書いていきます
 function pressXbtn(){
-    //modalClose()
+    for(let i = 0; i < closeBtn.length; i++){
+        closeBtn[i].addEventListener('click',function(e) {
+            modalClose(e);
+        });
+    }
 }
-
-// クリックで閉じるイベントリスナー
-// ↓ 仮にx印で閉じるように書いているので、「x印クリックでmodalを閉じる関数」に.addEventListenerを紐付けするように変更します
-closeBtn.addEventListener('click', pressXbtn);
+pressXbtn();
 
 // // モーダル以外がクリックされた時に閉じる関数
 // function clickAnywhere(e) {// 以下のeventは引数として扱うので、宣言時に用意も必要です
