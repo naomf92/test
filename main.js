@@ -1,6 +1,7 @@
 const modal =  document.getElementsByClassName('modal')//モーダル要素
 
-const openBtn = document.getElementsByClassName('btn')[0];//モーダルを出すボタン要素
+// こちらも.modalCloseと同様にquerySelectorAllにしましょう
+const openBtn = document.getElementsByClassName('btn');//モーダルを出すボタン要素
 
 //const closeBtn = document.getElementsByClassName('modalClose')[0];
 const closeBtn = document.querySelectorAll('.modalClose');
@@ -20,6 +21,9 @@ function modalOpen(e) {
     }
 }
 openBtn.addEventListener('click', modalOpen);
+// ↑ 定数openBtnの配列番号(取得d系た要素の番号)番に対して、イベント引数の入った引数eを渡して、関数modalOpenを呼び出しましょう
+// ヒント: 今日の面談で関数pressXbtnの.addEventListenerの第二引数書き換えで行った作業と全く同じです。
+// インデックス番号の変数で、「そんな変数ないです」とエラーが出ますが、これは、上記for文の場所が、今の場所ではなく、移動させる必要があるからです。
 
 // モーダルを閉じる関数
 // ↑ この関数は、閉じることだけに特化しているので、「x印で」閉じるのか「外の範囲で」閉じるのかに関して(where)詳しい機能を用意するのは、これからです
