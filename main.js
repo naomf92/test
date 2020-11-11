@@ -4,9 +4,6 @@ const openBtn = document.querySelectorAll('.btn');//モーダルを出すボタ�
 
 const closeBtn = document.querySelectorAll('.modalClose');//モーダルを閉じる要素
 
-// モーダル以外の場所クリックのイベントリスナー
-// window.addEventListener('click', clickAnywhere);
-
 // モーダルオープンの関数
 function modalOpen(e) {
     let dataModalOpen = e.currentTarget.getAttribute('data-name');
@@ -51,10 +48,12 @@ function pressXbtn(){
 }
 pressXbtn();
 
-// // モーダル以外がクリックされた時に閉じる関数
-// function clickAnywhere(e) {// 以下のeventは引数として扱うので、宣言時に用意も必要です
-//     if(e.target == modal) {
-//         modal.style.display = 'none';
-//         console.log(e);
-//     }
-// }
+// モーダル以外がクリックされた時に閉じる関数
+function clickAnywhere(e) {
+    for(let i = 0; i < modal.length; i++) {
+        if(e.target === modal[i]) {
+            modalClose();
+        }
+    }
+}
+window.addEventListener('click', clickAnywhere);
