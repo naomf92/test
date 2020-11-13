@@ -23,9 +23,6 @@ function open() {
 }
 open();
 
-// ↑ 定数openBtnの配列番号(取得d系た要素の番号)番に対して、イベント引数の入った引数eを渡して、関数modalOpenを呼び出しましょう
-// ヒント: 今日の面談で関数pressXbtnの.addEventListenerの第二引数書き換えで行った作業と全く同じです。
-// インデックス番号の変数で、「そんな変数ないです」とエラーが出ますが、これは、上記for文の場所が、今の場所ではなく、移動させる必要があるからです。
 
 // モーダルを閉じる関数
 function modalClose() {
@@ -36,17 +33,14 @@ function modalClose() {
         setTimeout(function() {
             modal[i].classList.remove('is-close')
         }, 1000);
-    }
-}
 
-function pressXbtn(){
-    for(let i = 0; i < closeBtn.length; i++){
         closeBtn[i].addEventListener('click',function(e) {
             modalClose(e);
         });
     }
 }
-pressXbtn();
+modalClose();
+
 
 // モーダル以外がクリックされた時に閉じる関数
 function clickAnywhere(e) {
