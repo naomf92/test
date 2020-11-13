@@ -23,7 +23,7 @@ function modalOpen(e) {// イベント引数を用意すると良いかもしれ
         //↓ 記述が長くなるので、右辺は定数に入れて定数名で条件式に呼び出すのが可読性が高くなります
         if (modal[i].getAttribute('data-name') === dataModalOpen) {
             console.log(modal[i]);
-            modal[i].classList.add('modalOpen');//[i]個目のモーダルが出る
+            modal[i].classList.add('modalOpen');
             console.log('if文スコープ内');
         }
         console.log('for文スコープ内');
