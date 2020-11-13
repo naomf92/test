@@ -5,23 +5,32 @@ const openBtn = document.querySelectorAll('.btn');//モーダルを出すボタ�
 const closeBtn = document.querySelectorAll('.modalClose');//モーダルを閉じる要素
 
 // モーダルオープンの関数
-function modalOpen(e) {
-    let dataModalOpen = e.currentTarget.getAttribute('data-name');
+// function modalOpen(e) {
+//     let dataModalOpen = e.currentTarget.getAttribute('data-name');
 
+//     for(let i = 0; i < modal.length; i++){
+//         if (modal[i].getAttribute('data-name') === dataModalOpen) {
+//             modal[i].classList.add('is-open');
+//         }
+//     }
+// }
+
+function modalOpen() {
     for(let i = 0; i < modal.length; i++){
-        if (modal[i].getAttribute('data-name') === dataModalOpen) {
-            modal[i].classList.add('is-open');
-        }
-    }
-}
 
-function open() {
-    for(let i = 0; i < openBtn.length; i++){
+        function open(e) {
+            let dataModalOpen = e.currentTarget.getAttribute('data-name');
+            for(let i = 0; i < modal.length; i++){
+                if (modal[i].getAttribute('data-name') === dataModalOpen) {
+                    modal[i].classList.add('is-open');
+                }
+            }
+        }
             openBtn[i].addEventListener('click', function(e) {
-                modalOpen(e);});
+                open(e);});
         }
 }
-open();
+modalOpen();
 
 
 // モーダルを閉じる関数
