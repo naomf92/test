@@ -1,8 +1,6 @@
 const modal =  document.getElementsByClassName('modal')//モーダル要素
-//console.log(modal);
 
 const openBtn = document.getElementsByClassName('btn')[0];//モーダルを出すボタン要素
-//console.log(openBtn);
 
 //const closeBtn = document.getElementsByClassName('modalClose');
 
