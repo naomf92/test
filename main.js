@@ -14,24 +14,20 @@ const closeBtn = document.querySelectorAll('.modalClose');//モーダルを閉�
 //         }
 //     }
 // }
-
 function modalOpen() {
     for(let i = 0; i < modal.length; i++){
 
         function open(e) {
             let dataModalOpen = e.currentTarget.getAttribute('data-name');
-            for(let i = 0; i < modal.length; i++){
-                if (modal[i].getAttribute('data-name') === dataModalOpen) {
-                    modal[i].classList.add('is-open');
-                }
+            if (modal[i].getAttribute('data-name') === dataModalOpen) {
+                modal[i].classList.add('is-open');
             }
         }
-            openBtn[i].addEventListener('click', function(e) {
-                open(e);});
-        }
+        openBtn[i].addEventListener('click', function(e) {
+            open(e);});
+    }
 }
 modalOpen();
-
 
 // モーダルを閉じる関数
 function modalClose() {
