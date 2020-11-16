@@ -4,7 +4,7 @@ const openBtn = document.querySelectorAll('.btn');//モーダルを出すボタ�
 
 const closeBtn = document.querySelectorAll('.modalClose');//モーダルを閉じる要素
 
-//モーダルを開く関数
+
 function modalOpen() {
     for(let i = 0; i < modal.length; i++){
 
@@ -20,7 +20,7 @@ function modalOpen() {
 }
 modalOpen();
 
-// モーダルを閉じる関数
+
 function modalClose() {
     for(let i = 0; i < modal.length; i++){
         modal[i].classList.remove('is-open');
