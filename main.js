@@ -3,7 +3,7 @@ const modal =  document.getElementsByClassName('modal');
 const openBtn = document.querySelectorAll('.btn');
 
 const closeBtn = document.querySelectorAll('.modalClose');
-
+//重複しているfor文をまとめる
 function modalOpen() {
     for(let i = 0; i < modal.length; i++){
 
