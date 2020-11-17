@@ -30,7 +30,7 @@ function modalClose() {
 
         closeBtn[i].addEventListener('click', function(e) {
             modalClose(e);});
-
+        // ↓ これはなくてOKです
         modal[i].addEventListener('click',function(e) {
             modalClose(e)});
     }
@@ -43,4 +43,4 @@ modalClose();
 //         modalClose(e)});
 //     }
 // }
-// clickAnywhere();
+// clickAnywhere(); → window.addEventListener('click', clickAnywhere);でした
