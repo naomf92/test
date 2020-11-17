@@ -1,6 +1,6 @@
 const modal =  document.getElementsByClassName('modal');
 
-const openBtn = document.getElementsByClassName('btn')[0];
+const openBtn = document.getElementsByClassName('btn');
 
 const closeBtn = document.querySelectorAll('.modalClose');
 
@@ -27,15 +27,20 @@ function modalClose() {
         setTimeout(function() {
             modal[i].classList.remove('is-close')
         }, 1000);
+
+        closeBtn[i].addEventListener('click', function(e) {
+            modalClose(e);});
+
+        modal[i].addEventListener('click',function(e) {
+            modalClose(e)});
     }
 }
 modalClose();
 
-function clickAnywhere(e) {
-    for(let i = 0; i < modal.length; i++) {
-        if(e.target === modal[i]) {
-            modalClose();
-        }
-    }
-}
-window.addEventListener('click', clickAnywhere);
+// function clickAnywhere() {
+//     for(let i = 0; i < modal.length; i++) {
+//         modal[i].addEventListener('click',function(e) {
+//         modalClose(e)});
+//     }
+// }
+// clickAnywhere();
