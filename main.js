@@ -1,9 +1,8 @@
-const modal =  document.getElementsByClassName('modal')//モーダル要素
+const modal =  document.getElementsByClassName('modal');
 
-const openBtn = document.querySelectorAll('.btn');//モーダルを出すボタン要素
+const openBtn = document.querySelectorAll('.btn');
 
-const closeBtn = document.querySelectorAll('.modalClose');//モーダルを閉じる要素
-
+const closeBtn = document.querySelectorAll('.modalClose');
 
 function modalOpen() {
     for(let i = 0; i < modal.length; i++){
@@ -19,7 +18,6 @@ function modalOpen() {
     }
 }
 modalOpen();
-
 
 function modalClose() {
     for(let i = 0; i < modal.length; i++){
@@ -37,8 +35,6 @@ function modalClose() {
 }
 modalClose();
 
-
-// モーダル以外がクリックされた時に閉じる関数
 function clickAnywhere(e) {
     for(let i = 0; i < modal.length; i++) {
         if(e.target === modal[i]) {
