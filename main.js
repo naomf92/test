@@ -13,7 +13,7 @@ const modalOpen = () => {
                 modal[i].classList.add('is-open');
             }
         };
-        openBtn[i].addEventListener('click', function(e) {
+        openBtn[i].addEventListener('click', (e) => {
             open(e);});
 
         const close = () => {
@@ -24,10 +24,10 @@ const modalOpen = () => {
             modal[i].classList.remove('is-close')
             }, 1000);
         };
-        closeBtn[i].addEventListener('click', function(e) {
+        closeBtn[i].addEventListener('click', (e) => {
             close(e);});
 
-        modal[i].addEventListener('click',function(e) {
+        modal[i].addEventListener('click', (e) => {
             close(e)});
     }
 
